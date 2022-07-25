@@ -83,6 +83,6 @@ $$\text{DC}(X, Y) = \frac{2 \times |X \cap Y|}{|X| + |Y|}.$$
 
 where X is the predicted set of pixels and Y is the ground truth.
 
-
+## Pre-Processing, Model, and Post-Processing
 
 ![HubMap-Process Flow](https://user-images.githubusercontent.com/20917127/180693726-a98fdec1-dd7d-4573-afb7-05863a60635e.png)
