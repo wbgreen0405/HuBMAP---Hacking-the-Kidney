@@ -1,5 +1,5 @@
 # <a id='3'>Introduction📔</a>
-[Table of contents](#0.1)
+
 
 Welcome to this new Kaggle competition. The [Human BioMolecular Atlas Program (HuBMAP)](https://hubmapconsortium.org/) is sponsored by The [National Institutes of Health (NIH)](https://www.nih.gov/). The primary task of HuBMAP is to catalyze the development of a framework for mapping the human body at a level of **glomeruli functional tissue units** for the first time in history. Hoping to become one of the world’s largest collaborative biological projects, HuBMAP aims to be an open map of the human body at the cellular level. **This competition, “Hacking the Kidney," starts by mapping the human kidney at single cell resolution.**
 
