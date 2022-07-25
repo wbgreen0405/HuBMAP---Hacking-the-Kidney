@@ -23,6 +23,8 @@ The glomerulus (plural glomeruli) is a network of small blood vessels (capillari
 
 <br>
 
+
+
 <div style="clear:both;display:table">
 <img src="https://ohiostate.pressbooks.pub/app/uploads/sites/36/h5p/content/37/images/file-599206597bdbc.jpg" style="width:45%;float:left"/>
 <img src="https://cdn.kastatic.org/ka-perseus-images/0e7bfc98302c3e45dc7ec73ab142566a57513ec3.svg" style="width:45%;float:left"/>
@@ -80,3 +82,7 @@ Dice Coefficient is common in case our task involve **segmentation**. The Dice c
 $$\text{DC}(X, Y) = \frac{2 \times |X \cap Y|}{|X| + |Y|}.$$
 
 where X is the predicted set of pixels and Y is the ground truth.
+
+
+
+![HubMap-Process Flow](https://user-images.githubusercontent.com/20917127/180693726-a98fdec1-dd7d-4573-afb7-05863a60635e.png)
