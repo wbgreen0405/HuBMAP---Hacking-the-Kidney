@@ -1,0 +1,51 @@
+[tool.ruff]
+line-length = 100
+exclude = ["data", "outputs", "logs"]
+select = ["E", "F", "W", "C90", "N", "D", "UP", "I", "S"]
+ignore = ["D100", "D104"]
+
+[tool.bandit]
+skips = ["B101"]  # Ignore assert statement warnings
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "-ra -q"
+testpaths = [
+    "tests",
+]
+
+[project]
+name = "hubmap-kidney-segmentation"
+version = "0.1.0"
+description = "Kaggle solution for HuBMAP - Hacking the Kidney"
+authors = [
+    { name="Your Name", email="youremail@domain.com" }
+]
+requires-python = ">=3.8"
+dependencies = [
+    "numpy",
+    "pandas",
+    "matplotlib",
+    "scikit-learn",
+    "opencv-python",
+    "tqdm",
+    "tensorflow",
+    "keras",
+    "albumentations",
+    "pytest",
+    "ruff",
+    "bandit",
+    "pre-commit",
+    "efficientnet",
+    "tf-explain",
+    "keras-unet-collection",
+]
+
+[tool.isort]
+profile = "black"
+line_length = 100
+skip = ["data", "outputs", "logs"]
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
