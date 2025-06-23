@@ -1,24 +1,17 @@
-from albumentations import (
-    Compose, HorizontalFlip, VerticalFlip, RandomRotate90, ShiftScaleRotate,
-    OneOf, OpticalDistortion, GridDistortion, IAAPiecewiseAffine,
-    HueSaturationValue, CLAHE, RandomBrightnessContrast
-)
-import cv2
+import tensorflow as tf
 
-def get_augmentations():
-    return Compose([
-        HorizontalFlip(),
-        VerticalFlip(),
-        RandomRotate90(),
-        ShiftScaleRotate(shift_limit=0.0625, scale_limit=0.2, rotate_limit=15, p=0.9, border_mode=cv2.BORDER_REFLECT),
-        OneOf([
-            OpticalDistortion(p=0.3),
-            GridDistortion(p=.1),
-            IAAPiecewiseAffine(p=0.3),
-        ], p=0.3),
-        OneOf([
-            HueSaturationValue(10,15,10),
-            CLAHE(clip_limit=2),
-            RandomBrightnessContrast(),            
-        ], p=0.3),
-    ], p=1.0)
+def tf_augment(image, mask):
+    if tf.random.uniform(()) > 0.5:
+        image = tf.image.flip_left_right(image)
+        mask = tf.image.flip_left_right(mask)
+    if tf.random.uniform(()) > 0.4:
+        image = tf.image.flip_up_down(image)
+        mask = tf.image.flip_up_down(mask)
+    if tf.random.uniform(()) > 0.5:
+        image = tf.image.rot90(image, k=1)
+        mask = tf.image.rot90(mask, k=1)
+    if tf.random.uniform(()) > 0.45:
+        image = tf.image.random_saturation(image, 0.7, 1.3)
+    if tf.random.uniform(()) > 0.45:
+        image = tf.image.random_contrast(image, 0.8, 1.2)
+    return image, mask
