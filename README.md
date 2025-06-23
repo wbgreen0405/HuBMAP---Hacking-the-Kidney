@@ -2,7 +2,7 @@
 
 Code for the Kaggle challenge to detect functional tissue units (FTUs) across different tissue preparation pipelines.
 
-[HuBMAP Challenge on Kaggle](https://www.kaggle.com/competitions/hubmap-hacking-the-kidney)
+[HuBMAP Challenge on Kaggle](https://www.kaggle.com/competitions/hubmap-kidney-segmentation/overview)
 
 ---
 
